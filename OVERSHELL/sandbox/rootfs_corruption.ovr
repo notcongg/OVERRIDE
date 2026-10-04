@@ -1,0 +1,13 @@
+# ROOTFS_CORRUPTION - reproducible experiment script
+# Run: override --script OVERSHELL/sandbox/rootfs_corruption.ovr
+seed 9
+autofail off
+ls /etc
+cat /etc/server.conf
+inject server rootfs-corruption
+inspect server
+corrupt /etc/server.conf --force
+events
+why server
+recover server rootfs-corruption
+status

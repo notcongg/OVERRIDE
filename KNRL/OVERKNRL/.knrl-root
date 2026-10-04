@@ -1,0 +1,2 @@
+OVERKNRL physical root: seed data + docs for the simulated filesystem.
+Virtual / maps here. The live tree is in-memory (see ARCHITECTURE.md).

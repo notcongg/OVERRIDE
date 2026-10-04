@@ -1,0 +1,9 @@
+# CASCADING_FAILURE -- reproducible experiment script
+# Run: override --script sandbox/cascading_failure.ovr
+status
+break server
+status
+trace client
+why client
+repair server
+status

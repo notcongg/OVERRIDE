@@ -1,0 +1,14 @@
+# SERVICE_CASCADE - reproducible experiment script
+# Run: override --script OVERSHELL/sandbox/service_cascade.ovr
+seed 5
+autofail off
+service spawn web server app /etc/server.conf
+service start web
+service list
+process kill svc-web oom
+tick 1
+service list
+tick 1
+service list
+events
+why server

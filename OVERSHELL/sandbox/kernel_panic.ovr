@@ -1,0 +1,16 @@
+# KERNEL_PANIC - reproducible experiment script
+# Run: override --script OVERSHELL/sandbox/kernel_panic.ovr
+seed 7
+autofail off
+status
+inject database mem-corrupt
+tick 10
+status
+events
+why database
+inject database kernel-panic
+status
+events
+repair database
+reboot database
+status

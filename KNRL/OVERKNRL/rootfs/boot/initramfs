@@ -1,0 +1,2 @@
+simulated initramfs
+modules: sched,net,disk

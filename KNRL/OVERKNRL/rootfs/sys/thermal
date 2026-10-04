@@ -1,0 +1,2 @@
+subsystem: thermal
+state: nominal

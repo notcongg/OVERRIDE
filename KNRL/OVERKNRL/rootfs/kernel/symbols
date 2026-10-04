@@ -1,0 +1,5 @@
+sys_open
+sys_read
+sys_write
+sched_run
+ipc_send

@@ -1,0 +1,14 @@
+# THERMAL_RUNAWAY - reproducible experiment script
+# Run: override --script OVERSHELL/sandbox/thermal_runaway.ovr
+seed 42
+autofail off
+status
+inject server overheat
+tick 10
+status
+inspect server
+why server
+trace server
+cool server
+tick 5
+status
